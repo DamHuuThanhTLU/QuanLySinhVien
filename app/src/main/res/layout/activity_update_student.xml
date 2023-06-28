@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityAddSubjects">
+
+    <TextView
+        android:layout_marginTop="80dp"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:text="Update student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+    <EditText
+        android:id="@+id/EditTextUpdateStudentName"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:hint="Student name"
+        android:layout_width="300dp"
+        android:layout_height="60dp"></EditText>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:text="Sex : "
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"></TextView>
+    <RadioGroup
+        android:paddingTop="15dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="70dp">
+        <RadioButton
+            android:checked="true"
+            android:textColor="#000000"
+            android:id="@+id/radiobuttonUpdateMale"
+            android:text="Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></RadioButton>
+        <RadioButton
+            android:textColor="#000000"
+            android:id="@+id/radiobuttonUpdateFemale"
+            android:layout_marginLeft="100dp"
+            android:text="Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></RadioButton>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/EditTextUpdateSudentCode"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:hint="Student code"
+        android:layout_width="300dp"
+        android:layout_height="60dp"></EditText>
+    <EditText
+        android:inputType="datetime"
+        android:id="@+id/EditTextUpdateDateOfBirth"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:hint="Date of birth"
+        android:layout_width="300dp"
+        android:layout_height="60dp"></EditText>
+    <Button
+        android:id="@+id/buttonUpdateStudent"
+        android:layout_marginTop="10dp"
+        android:text="Update"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityInformationSubject">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:textSize="30sp"
+        android:textColor="#FF00"
+        android:gravity="center"
+        android:text="Student Information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+    <LinearLayout
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Student name : "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/txtStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Sex : "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/txtStudentSex"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Student code : "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/txtStudentCode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Date of birth : "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+        <TextView
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/txtStudentDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+
+</LinearLayout>
