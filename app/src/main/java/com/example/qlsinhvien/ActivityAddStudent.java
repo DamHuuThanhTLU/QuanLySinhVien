@@ -55,13 +55,13 @@ public class ActivityAddStudent extends AppCompatActivity {
         //Tạo đối tượng cửa sổ dialog
         Dialog dialog  =  new Dialog(this);
 
-        //Nạp layout vào
+
         dialog.setContentView(R.layout.dialogaddstudent);
 
-        //Click No mới thoát, click ngoài ko thoát
+
         dialog.setCanceledOnTouchOutside(false);
 
-        //Ánh xạ
+
         Button btnYes = dialog.findViewById(R.id.buttonYesAddStudent);
         Button btnNo = dialog.findViewById(R.id.buttonNoAddStudent);
 
@@ -89,25 +89,25 @@ public class ActivityAddStudent extends AppCompatActivity {
                     database.AddStudent(student);
                     //Khởi tạo lại activity main
                     Intent intent = new Intent(ActivityAddStudent.this,ActivityStudent.class);
-                    //finish();
+
                     intent.putExtra("id_subject",id_subject);
                     startActivity(intent);
                     Toast.makeText(ActivityAddStudent.this,"more success",Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        //Nếu no thì đóng dialog
+
         btnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.cancel();
             }
         });
-        //show dialog lên activity
+
         dialog.show();
     }
 
-    //Create Subject
+
     private Student CreatStudent(int id_subject){
 
         String name = editTextStudentName.getText().toString();

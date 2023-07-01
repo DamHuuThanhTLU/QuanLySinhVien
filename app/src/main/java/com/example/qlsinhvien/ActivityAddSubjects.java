@@ -44,16 +44,16 @@ public class ActivityAddSubjects extends AppCompatActivity {
     //Dialog Add
     private void DialogAdd() {
 
-        //Tạo đối tượng cửa sổ dialog
+
         Dialog dialog  =  new Dialog(this);
 
-        //Nạp layout vào
+
         dialog.setContentView(R.layout.dialogadd);
 
-        //Click No mới thoát, click ngoài ko thoát
+
         dialog.setCanceledOnTouchOutside(false);
 
-        //Ánh xạ
+
         Button btnYes = dialog.findViewById(R.id.buttonYesAddSubject);
         Button btnNo = dialog.findViewById(R.id.buttonNoAddSubject);
 
@@ -72,26 +72,26 @@ public class ActivityAddSubjects extends AppCompatActivity {
                     Subject subject = CreatSubject();
 
                     database.AddSubjects(subject);
-                    //Khởi tạo lại activity main
+
                     Intent intent = new Intent(ActivityAddSubjects.this,ActivitySubjects.class);
-                    //finish();
+
                     startActivity(intent);
                     Toast.makeText(ActivityAddSubjects.this,"more success",Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        //Nếu no thì đóng dialog
+
         btnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.cancel();
             }
         });
-        //show dialog lên activity
+
         dialog.show();
     }
 
-    //Create Subject
+
     private Subject CreatSubject(){
 
         String subjecttitle = edtSubjectTitle.getText().toString();

@@ -56,7 +56,7 @@ public class ActivityStudent extends AppCompatActivity {
 
         ArrayListStudent.clear();
 
-        //đối tượng sinh viên id môn học = ?
+
         Cursor cursor = database.getDataStudent(id_subject);
         while (cursor.moveToNext()) {
 
@@ -76,19 +76,19 @@ public class ActivityStudent extends AppCompatActivity {
         cursor.moveToFirst();
         cursor.close();
     }
-    //Nạp một menu add vào actionbar
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menuaddstudent,menu);
         return true;
     }
-    //Bắt sự kiện khi click vào Add
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
         {
             case R.id.menuAddStudent:
-                //Chuyển tới màn hình thêm môn học
+
                 Intent intent = new Intent(this,ActivityAddStudent.class);
                 intent.putExtra("id_subject",id_subject);
                 startActivity(intent);
@@ -101,7 +101,7 @@ public class ActivityStudent extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //Phương thức xóa student
+
     public void delete(final int id_student){
         DialogDeleteStudent(id_student);
     }
@@ -167,16 +167,16 @@ public class ActivityStudent extends AppCompatActivity {
     //Dialog delete
     private void DialogDeleteStudent(int id_student) {
 
-        //Tạo đối tượng cửa sổ dialog
+
         Dialog dialog  =  new Dialog(this);
 
-        //Nạp layout vào
+
         dialog.setContentView(R.layout.dialogdeletestudent);
 
-        //Click No mới thoát, click ngoài ko thoát
+
         dialog.setCanceledOnTouchOutside(false);
 
-        //Ánh xạ
+
         Button btnYes = dialog.findViewById(R.id.buttonYesDeleteStudent);
         Button btnNo = dialog.findViewById(R.id.buttonNoDeleteStudent);
 
@@ -185,9 +185,9 @@ public class ActivityStudent extends AppCompatActivity {
             public void onClick(View v) {
 
                 database = new database(ActivityStudent.this);
-                //Xóa trong SQL
+
                 database.DeleteStudent(id_student);
-                //Cập nhật lại listview
+
                 Intent intent = new Intent(ActivityStudent.this,ActivityStudent.class);
                 intent.putExtra("id_subject",id_subject);
                 startActivity(intent);
@@ -195,7 +195,7 @@ public class ActivityStudent extends AppCompatActivity {
 
             }
         });
-        //Nếu no thì đóng dialog
+
         btnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

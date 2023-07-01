@@ -65,32 +65,32 @@ public class ActivitySubjects extends AppCompatActivity {
         cursor.moveToFirst();
         cursor.close();
 
-        //Chuyển qua danh sách sinh viên
+
             listViewSubject.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent intent = new Intent(ActivitySubjects.this,ActivityStudent.class);
                     int id_subject = ArrayListSubject.get(position).getId_subject();
-                    //Gửi dữ liệu id qua activity student để xem sinh viên học môn học này
+
                     intent.putExtra("id_subject",id_subject);
                     startActivity(intent);
                 }
             });
 
     }
-    //Nạp một menu add vào actionbar
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menuadd,menu);
         return true;
     }
-    //Bắt sự kiện khi click vào Add
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
         {
             case R.id.menuAdd:
-                //Chuyển tới màn hình thêm môn học
+
                 Intent intent = new Intent(ActivitySubjects.this,ActivityAddSubjects.class);
                 startActivity(intent);
                 break;
@@ -103,7 +103,7 @@ public class ActivitySubjects extends AppCompatActivity {
     }
 
 
-    //Phương thức xóa subject
+
     public void delete(final int position){
 
         DialogDeleteSubject(position);

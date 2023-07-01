@@ -60,13 +60,13 @@ public class ActivityUpdateSubject extends AppCompatActivity {
         //Tạo đối tượng cửa sổ dialog
         Dialog dialog  =  new Dialog(this);
 
-        //Nạp layout vào
+
         dialog.setContentView(R.layout.dialogupdate);
 
-        //Click No mới thoát, click ngoài ko thoát
+
         dialog.setCanceledOnTouchOutside(false);
 
-        //Ánh xạ
+
         Button btnYes = dialog.findViewById(R.id.buttonYesUpdateSubject);
         Button btnNo = dialog.findViewById(R.id.buttonNoUpdateSubject);
 
@@ -87,7 +87,7 @@ public class ActivityUpdateSubject extends AppCompatActivity {
                 else {
 
                     database.UpdateSubject(subject,id);
-                    //Khởi tạo lại activity main
+
                     Intent intent = new Intent(ActivityUpdateSubject.this,ActivitySubjects.class);
 
                     startActivity(intent);
@@ -95,14 +95,14 @@ public class ActivityUpdateSubject extends AppCompatActivity {
                 }
             }
         });
-        //Nếu no thì đóng dialog
+
         btnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.cancel();
             }
         });
-        //show dialog lên activity
+
         dialog.show();
     }
     //Create Subject
