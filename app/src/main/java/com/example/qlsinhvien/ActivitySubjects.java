@@ -159,7 +159,7 @@ public class ActivitySubjects extends AppCompatActivity {
 
     }
 
-    //Dialog Update
+    
     private void DialogDeleteSubject(int position) {
 
         //Tạo đối tượng cửa sổ dialog
@@ -168,10 +168,10 @@ public class ActivitySubjects extends AppCompatActivity {
         //Nạp layout vào
         dialog.setContentView(R.layout.dialogdeletesubject);
 
-        //Click No mới thoát, click ngoài ko thoát
+
         dialog.setCanceledOnTouchOutside(false);
 
-        //Ánh xạ
+
         Button btnYes = dialog.findViewById(R.id.buttonYesDeleteSubject);
         Button btnNo = dialog.findViewById(R.id.buttonNoDeleteSubject);
 
@@ -188,7 +188,7 @@ public class ActivitySubjects extends AppCompatActivity {
 
             }
         });
-        //Nếu no thì đóng dialog
+
         btnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,7 +200,7 @@ public class ActivitySubjects extends AppCompatActivity {
     }
 
 
-    //Nhấn nút back ở activity này thì chuyển qua activity được thiết lập riêng
+
     @Override
     public void onBackPressed() {
         counter++;
